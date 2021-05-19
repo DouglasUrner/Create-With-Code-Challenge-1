@@ -10,12 +10,12 @@ public class FollowPlane : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        offset = plane.transform.position - transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = plane.transform.position + offset;
+        transform.position = plane.transform.position - offset;
     }
 }
