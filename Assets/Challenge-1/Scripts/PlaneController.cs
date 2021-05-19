@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlaneController : MonoBehaviour
 {
-    public float speed;
-    public float pitchRate;
+    public float speed = 10;
+    public float pitchRate = 20;
     public float pitchInput;
 
     // Start is called before the first frame update
@@ -24,6 +24,6 @@ public class PlaneController : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
         // tilt the plane up/down based on up/down arrow keys
-        transform.Rotate(Vector3.right * pitchInput * pitchRate * Time.deltaTime);
+        transform.Rotate(Vector3.left * pitchInput * pitchRate * Time.deltaTime);
     }
 }
